@@ -1,0 +1,20 @@
+package com.tz.authserver.auth.service.impl;
+
+import com.tz.authserver.auth.entity.OauthClientDetails;
+import com.tz.authserver.auth.mapper.OauthClientDetailsMapper;
+import com.tz.authserver.auth.service.IOauthClientDetailsService;
+import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+import org.springframework.stereotype.Service;
+
+/**
+ * <p>
+ *  服务实现类
+ * </p>
+ *
+ * @author tz
+ * @since 2019-12-26
+ */
+@Service
+public class OauthClientDetailsServiceImpl extends ServiceImpl<OauthClientDetailsMapper, OauthClientDetails> implements IOauthClientDetailsService {
+
+}

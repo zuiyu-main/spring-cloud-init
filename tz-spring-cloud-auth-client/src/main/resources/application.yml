@@ -1,0 +1,62 @@
+spring:
+  application:
+    name: client-service
+  main:
+    allow-bean-definition-overriding: true
+  http:
+    encoding:
+      enabled: true
+      charset: UTF-8
+      force: true
+  freemarker:
+    enabled: true
+    suffix: .html
+    request-context-attribute: rc
+    content-type: text/html
+    charset: UTF-8
+  mvc:
+    throw-exception-if-no-handler-found: true
+  resources:
+    add-mappings: false
+  datasource:
+    url: jdbc:mysql://localhost:3306/springcloud-oauth2?useUnicode=true
+    username: root
+    password: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
+eureka:
+  client:
+    service-url: "http://localhost:53000/eureka/"
+    enabled: false
+  instance:
+    prefer-ip-address: true
+    instance-id: ${spring.application.name}:${spring.cloud.client.ip-address}:${spring.application.instance_id:${server.port}}
+server:
+  port: 8881
+  tomcat:
+    remote-ip-header: x-forwarded-for
+    protocol-header: x-forwarded-proto
+  use-forward-headers: true
+  servlet:
+    context-path: /client
+
+logging:
+  level:
+    root: info
+    org:
+      springframework:
+        web: info
+management:
+  endpoints:
+    web:
+      exposure:
+        include: refresh,health,info,env
+feign:
+  hystrix:
+    enabled: true
+  compression:
+    request:
+      enabled: true
+      mime-types: text/html,application/xml,application/json
+      min-request-size: 2048
+    response:
+      enabled: true

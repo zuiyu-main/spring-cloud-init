@@ -11,10 +11,10 @@ import org.springframework.stereotype.Repository;
  * </p>
  *
  * @author tz
- * @since 2019-12-26
+ * @since 2019-12-30
  */
-@Repository
 @Mapper
+@Repository
 public interface OauthClientDetailsMapper extends BaseMapper<OauthClientDetails> {
 
 }

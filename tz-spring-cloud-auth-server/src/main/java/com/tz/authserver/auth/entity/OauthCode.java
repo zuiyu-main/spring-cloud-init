@@ -1,6 +1,8 @@
 package com.tz.authserver.auth.entity;
 
 import com.baomidou.mybatisplus.annotation.TableName;
+import java.time.LocalDateTime;
+import java.sql.Blob;
 import java.io.Serializable;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -14,7 +16,7 @@ import lombok.experimental.Accessors;
  * </p>
  *
  * @author tz
- * @since 2019-12-26
+ * @since 2019-12-30
  */
 @Data
 @EqualsAndHashCode(callSuper = false)
@@ -27,7 +29,9 @@ public class OauthCode implements Serializable {
 
     private String code;
 
-    private String authentication;
+    private Blob authentication;
+
+    private LocalDateTime createTime;
 
 
 }

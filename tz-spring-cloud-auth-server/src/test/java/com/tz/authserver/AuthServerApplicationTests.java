@@ -10,10 +10,6 @@ public class AuthServerApplicationTests {
     @Test
     public void contextLoads() {
     }
-    @Test
-    public void createBCryptPw(){
-        String hashpw = BCrypt.hashpw("123", BCrypt.gensalt());
-        System.out.println(hashpw);
-    }
+
 
 }

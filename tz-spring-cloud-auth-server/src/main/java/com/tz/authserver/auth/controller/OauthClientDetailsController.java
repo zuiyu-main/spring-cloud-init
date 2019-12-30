@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
  * </p>
  *
  * @author tz
- * @since 2019-12-26
+ * @since 2019-12-30
  */
 @RestController
 @RequestMapping("/auth/oauth-client-details")

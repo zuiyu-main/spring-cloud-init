@@ -1,7 +1,6 @@
 package com.tz.authserver.service;
 
 import com.alibaba.fastjson.JSON;
-import com.tz.authserver.dao.UserDao;
 import com.tz.authserver.model.UserDto;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,8 +21,6 @@ import java.util.List;
 @Service
 @Slf4j
 public class MyUserDetailService implements UserDetailsService {
-    @Autowired
-    UserDao userDao;
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
 

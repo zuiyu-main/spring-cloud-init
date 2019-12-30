@@ -300,7 +300,7 @@ http://127.0.0.1:8888/auth/oauth/token?client_id=c1&client_secret=secret&grant_t
 ## 后续见client README第一部分
 
 ## jwt jdbc
-
+## 授权服务器jwt配置
 * tokenConfig配置jwt
 ```java
 @Configuration
@@ -397,3 +397,55 @@ public class TokenConfig {
                 .stateless(true);
     }
 ```
+
+## jdbc 保存详情
+* mysql配置客户端详情表以及授权码表，sql见resources/db/clientDetail.sql
+
+* auth server 配置客户端详情
+```
+ @Override
+    public void configure(ClientDetailsServiceConfigurer clients) throws Exception {
+        clients.withClientDetails(clientDetailsService);
+        // 内存模式配置 start
+//        clients.inMemory()
+//                // 客户端id
+//                .withClient("c1")
+//                // 客户端密钥
+//                .secret(new BCryptPasswordEncoder().encode("secret"))
+//                // 资源列表
+//                .resourceIds("res1")
+//                // 该client允许的授权类型，
+//                .authorizedGrantTypes("authorization_code","password","client_credentials",
+//                        "implicit","refresh_token")
+//                // 允许的授权范围，就是一个标识，read，write
+//                .scopes("all")
+//                .autoApprove(false)
+//                // 验证回调地址
+//                .redirectUris("http://www.baidu.com");
+        // 内存模式配置 end
+
+    }
+```
+* 注册clientDetailBean
+```
+   /**
+     * 配置jdbc保存客户端详情的配置1
+     * @param dataSource
+     * @return
+     */
+    @Bean
+    public ClientDetailsService clientDetailsService(DataSource dataSource){
+        ClientDetailsService clientDetailsService = new JdbcClientDetailsService(dataSource);
+        ((JdbcClientDetailsService)clientDetailsService).setPasswordEncoder(passwordEncoder);
+        return clientDetailsService;
+    }
+```
+* 授权码修改为保存到数据库
+```
+
+    @Bean
+    public AuthorizationCodeServices authorizationCodeServices(DataSource dataSource) {
+        return new JdbcAuthorizationCodeServices(dataSource);
+    }
+```
+* 到此，jdbc保存授权客户端信息就结束了

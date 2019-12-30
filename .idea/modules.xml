@@ -5,6 +5,8 @@
       <module fileurl="file://$PROJECT_DIR$/tz-spring-cloud.iml" filepath="$PROJECT_DIR$/tz-spring-cloud.iml" />
       <module fileurl="file://$PROJECT_DIR$/tz-spring-cloud-auth-client/tz-spring-cloud-auth-client.iml" filepath="$PROJECT_DIR$/tz-spring-cloud-auth-client/tz-spring-cloud-auth-client.iml" />
       <module fileurl="file://$PROJECT_DIR$/tz-spring-cloud-auth-server/tz-spring-cloud-auth-server.iml" filepath="$PROJECT_DIR$/tz-spring-cloud-auth-server/tz-spring-cloud-auth-server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tz-spring-cloud-discovery/tz-spring-cloud-discovery.iml" filepath="$PROJECT_DIR$/tz-spring-cloud-discovery/tz-spring-cloud-discovery.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tz-spring-cloud-zuul/tz-spring-cloud-zuul.iml" filepath="$PROJECT_DIR$/tz-spring-cloud-zuul/tz-spring-cloud-zuul.iml" />
     </modules>
   </component>
 </project>

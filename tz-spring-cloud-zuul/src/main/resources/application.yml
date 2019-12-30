@@ -1,0 +1,55 @@
+server:
+  port: 8763
+  servlet:
+    context-path: /zuul
+eureka:
+  client:
+    enabled: true
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+  instance:
+    prefer-ip-address: true
+    instance-id: ${spring.application.name}:${spring.cloud.client.ip-address}:${spring.application.instance_id:${server.port}}
+spring:
+  application:
+    name: zuul-server
+  main:
+    allow-bean-definition-overriding: true
+  datasource:
+    url: jdbc:mysql://localhost:3306/springcloud-oauth2?useUnicode=true
+    username: root
+    password: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
+logging:
+  level:
+    root: info
+    org:
+      springframework: info
+zuul:
+  retryable: true
+  ignored-services: "*"
+  add-host-header: true
+  sensitive-headers: "*"
+  routes:
+    auth-server:
+      # 转发请求时是否去掉前缀
+      stripPrefix: false
+      path: /auth/**
+    client-service:
+      stripPrefix: false
+      path: /client/**
+management:
+  endpoints:
+    web:
+      exposure:
+        include: refresh,health,info,env
+feign:
+  hystrix:
+    enabled: true
+  compression:
+    request:
+      enabled: true
+      mime-types: ["text/xml","application/xml","application/json"]
+      min-request-size: 2048
+    response:
+      enabled: true

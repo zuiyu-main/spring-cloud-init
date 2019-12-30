@@ -16,6 +16,8 @@
     <modules>
         <module>tz-spring-cloud-auth-client</module>
         <module>tz-spring-cloud-auth-server</module>
+        <module>tz-spring-cloud-discovery</module>
+        <module>tz-spring-cloud-zuul</module>
     </modules>
 
     <properties>
@@ -112,6 +114,21 @@
             <version>2.7.0</version>
         </dependency>
         <!--swagger-->
+        <!--fast-json-->
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+        </dependency>
+        <!--lombok-->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+        </dependency>
+        <!--健康检查-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-actuator</artifactId>
+        </dependency>
     </dependencies>
 
     <build>

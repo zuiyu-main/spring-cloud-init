@@ -4,6 +4,8 @@
     <option name="originalFiles">
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/tz-spring-cloud-discovery/pom.xml" />
+        <option value="$PROJECT_DIR$/tz-spring-cloud-zuul/pom.xml" />
       </list>
     </option>
   </component>

@@ -1,0 +1,33 @@
+spring:
+  application:
+    name: eureka-discovery
+  datasource:
+    url: jdbc:mysql://localhost:3306/springcloud-oauth2?useUnicode=true
+    username: root
+    password: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
+server:
+  port: 8761
+
+eureka:
+  server:
+    # 关闭服务器自我保护，客户端心跳检测15分钟错误达到80%会保护
+    enable-self-preservation: false
+#     单位毫秒（60*1000）清理间隔
+    eviction-interval-timer-in-ms: 10000
+#     eureka 基于cap理论的ap策略，为了保证强一致性关闭此切换cp
+#    shouldUseReadOnlyResponseCache: true
+  client:
+    # 不作为客户端注册到注册中心
+    register-with-eureka: false
+    # com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+    fetch-registry: false
+    instance-info-replication-interval-seconds: 10
+    service-url:
+      defaultZone: http://localhost:${server.port}/eureka/
+  instance:
+    hostname: ${spring.cloud.client.ip-address}
+    prefer-ip-address: true
+    instance-id: ${spring.application.name}:${spring.cloud.client.ip-address}:${spring.application.instance.instance_id}:${server.port}
+
+

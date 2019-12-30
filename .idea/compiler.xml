@@ -7,20 +7,26 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="tz-spring-cloud-auth-server" />
+        <module name="tz-spring-cloud-zuul" />
+        <module name="tz-spring-cloud-discovery" />
         <module name="tz-spring-cloud-auth-client" />
+        <module name="tz-spring-cloud-auth-server" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="tz-spring-cloud" target="1.8" />
       <module name="tz-spring-cloud-auth-client" target="1.8" />
       <module name="tz-spring-cloud-auth-server" target="1.8" />
+      <module name="tz-spring-cloud-discovery" target="1.8" />
+      <module name="tz-spring-cloud-zuul" target="1.8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="tz-spring-cloud-auth-client" options="-parameters" />
       <module name="tz-spring-cloud-auth-server" options="-parameters" />
+      <module name="tz-spring-cloud-discovery" options="-parameters" />
+      <module name="tz-spring-cloud-zuul" options="-parameters" />
     </option>
   </component>
 </project>

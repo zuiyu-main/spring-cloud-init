@@ -62,7 +62,7 @@ public class ResourceServerConfig extends ResourceServerConfigurerAdapter {
 //    public ResourceServerTokenServices tokenServices(){
 //        // 使用远程服务请求校验token，指定校验token的url，client_id，client_secret
 //        RemoteTokenServices remoteTokenServices = new RemoteTokenServices();
-//        remoteTokenServices.setCheckTokenEndpointUrl("http://127.0.0.1:8888/auth/oauth/check_token");
+//        remoteTokenServices.setCheckTokenEndpointUrl("http://127.0.0.1:8762/auth/oauth/check_token");
 //        remoteTokenServices.setClientId("c1");
 //        remoteTokenServices.setClientSecret("secret");
 //        return remoteTokenServices;

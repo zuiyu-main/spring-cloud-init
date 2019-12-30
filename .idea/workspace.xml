@@ -2,46 +2,47 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8b6eeba5-3deb-4cd8-a8e0-f38a8bbff585" name="Default Changelist" comment="jdbc 保存客户端详情">
-      <change afterPath="$PROJECT_DIR$/tz-spring-cloud-auth-server/src/main/java/com/tz/authserver/sys/controller/PermissionController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tz-spring-cloud-auth-server/src/main/java/com/tz/authserver/sys/controller/RoleController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tz-spring-cloud-auth-server/src/main/java/com/tz/authserver/sys/controller/RolePermissionController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tz-spring-cloud-auth-server/src/main/java/com/tz/authserver/sys/controller/UserController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tz-spring-cloud-auth-server/src/main/java/com/tz/authserver/sys/controller/UserRoleController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tz-spring-cloud-auth-server/src/main/java/com/tz/authserver/sys/entity/Permission.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tz-spring-cloud-auth-server/src/main/java/com/tz/authserver/sys/entity/Role.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tz-spring-cloud-auth-server/src/main/java/com/tz/authserver/sys/entity/RolePermission.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tz-spring-cloud-auth-server/src/main/java/com/tz/authserver/sys/entity/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tz-spring-cloud-auth-server/src/main/java/com/tz/authserver/sys/entity/UserRole.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tz-spring-cloud-auth-server/src/main/java/com/tz/authserver/sys/mapper/PermissionMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tz-spring-cloud-auth-server/src/main/java/com/tz/authserver/sys/mapper/RoleMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tz-spring-cloud-auth-server/src/main/java/com/tz/authserver/sys/mapper/RolePermissionMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tz-spring-cloud-auth-server/src/main/java/com/tz/authserver/sys/mapper/UserMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tz-spring-cloud-auth-server/src/main/java/com/tz/authserver/sys/mapper/UserRoleMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tz-spring-cloud-auth-server/src/main/java/com/tz/authserver/sys/service/IPermissionService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tz-spring-cloud-auth-server/src/main/java/com/tz/authserver/sys/service/IRolePermissionService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tz-spring-cloud-auth-server/src/main/java/com/tz/authserver/sys/service/IRoleService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tz-spring-cloud-auth-server/src/main/java/com/tz/authserver/sys/service/IUserRoleService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tz-spring-cloud-auth-server/src/main/java/com/tz/authserver/sys/service/IUserService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tz-spring-cloud-auth-server/src/main/java/com/tz/authserver/sys/service/impl/PermissionServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tz-spring-cloud-auth-server/src/main/java/com/tz/authserver/sys/service/impl/RolePermissionServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tz-spring-cloud-auth-server/src/main/java/com/tz/authserver/sys/service/impl/RoleServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tz-spring-cloud-auth-server/src/main/java/com/tz/authserver/sys/service/impl/UserRoleServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tz-spring-cloud-auth-server/src/main/java/com/tz/authserver/sys/service/impl/UserServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tz-spring-cloud-auth-server/src/main/resources/db/initSys.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tz-spring-cloud-auth-server/src/main/resources/mapper/sys/PermissionMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tz-spring-cloud-auth-server/src/main/resources/mapper/sys/RoleMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tz-spring-cloud-auth-server/src/main/resources/mapper/sys/RolePermissionMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tz-spring-cloud-auth-server/src/main/resources/mapper/sys/UserMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tz-spring-cloud-auth-server/src/main/resources/mapper/sys/UserRoleMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tz-spring-cloud-discovery/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tz-spring-cloud-discovery/.mvn/wrapper/MavenWrapperDownloader.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tz-spring-cloud-discovery/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tz-spring-cloud-discovery/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tz-spring-cloud-discovery/mvnw" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tz-spring-cloud-discovery/mvnw.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tz-spring-cloud-discovery/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tz-spring-cloud-discovery/src/main/java/com/tz/discovery/DiscoveryApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tz-spring-cloud-discovery/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tz-spring-cloud-discovery/src/test/java/com/tz/discovery/DiscoveryApplicationTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tz-spring-cloud-zuul/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tz-spring-cloud-zuul/.mvn/wrapper/MavenWrapperDownloader.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tz-spring-cloud-zuul/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tz-spring-cloud-zuul/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tz-spring-cloud-zuul/mvnw" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tz-spring-cloud-zuul/mvnw.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tz-spring-cloud-zuul/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tz-spring-cloud-zuul/src/main/java/com/tz/zuul/ZuulApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tz-spring-cloud-zuul/src/main/java/com/tz/zuul/config/ResourceServerConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tz-spring-cloud-zuul/src/main/java/com/tz/zuul/config/TokenConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tz-spring-cloud-zuul/src/main/java/com/tz/zuul/config/WebSecurityConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tz-spring-cloud-zuul/src/main/java/com/tz/zuul/config/ZuulConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tz-spring-cloud-zuul/src/main/java/com/tz/zuul/filter/AuthFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tz-spring-cloud-zuul/src/main/java/com/tz/zuul/util/EncryptUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tz-spring-cloud-zuul/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tz-spring-cloud-zuul/src/test/java/com/tz/zuul/ZuulApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__mysql_mysql_connector_java_8_0_18.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tz-spring-cloud-auth-server/src/main/java/com/tz/authserver/AuthServerApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/tz-spring-cloud-auth-server/src/main/java/com/tz/authserver/AuthServerApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tz-spring-cloud-auth-server/src/main/java/com/tz/authserver/generator/CodeGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/tz-spring-cloud-auth-server/src/main/java/com/tz/authserver/generator/CodeGenerator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tz-spring-cloud-auth-server/src/main/java/com/tz/authserver/model/PermissionDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/tz-spring-cloud-auth-server/src/main/java/com/tz/authserver/model/PermissionDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tz-spring-cloud-auth-server/src/main/java/com/tz/authserver/model/UserDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/tz-spring-cloud-auth-server/src/main/java/com/tz/authserver/model/UserDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tz-spring-cloud-auth-server/src/main/java/com/tz/authserver/service/MyUserDetailService.java" beforeDir="false" afterPath="$PROJECT_DIR$/tz-spring-cloud-auth-server/src/main/java/com/tz/authserver/service/MyUserDetailService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tz-spring-cloud-auth-server/src/main/resources/db/clientDetail.sql" beforeDir="false" afterPath="$PROJECT_DIR$/tz-spring-cloud-auth-server/src/main/resources/db/clientDetail.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tz-spring-cloud-auth-server/src/test/java/com/tz/authserver/ClientDetailTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/tz-spring-cloud-auth-server/src/test/java/com/tz/authserver/ClientDetailTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tz-spring-cloud-auth-client/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/tz-spring-cloud-auth-client/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tz-spring-cloud-auth-client/src/main/java/com/tz/client/AuthClientApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/tz-spring-cloud-auth-client/src/main/java/com/tz/client/AuthClientApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tz-spring-cloud-auth-client/src/main/java/com/tz/client/config/ResourceServerConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/tz-spring-cloud-auth-client/src/main/java/com/tz/client/config/ResourceServerConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tz-spring-cloud-auth-client/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/tz-spring-cloud-auth-client/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tz-spring-cloud-auth-server/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/tz-spring-cloud-auth-server/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tz-spring-cloud-auth-server/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/tz-spring-cloud-auth-server/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tz-spring-cloud.iml" beforeDir="false" afterPath="$PROJECT_DIR$/tz-spring-cloud.iml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -133,7 +134,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="go.import.settings.migrated" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/tz-spring-cloud-zuul/src/main/java/com/tz/zuul/util" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -146,8 +147,12 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.tz.zuul.config" />
       <recent name="com.tz.client.config" />
       <recent name="com.tz.authserver.model" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/tz-spring-cloud-zuul/src/main/java/com/tz/zuul/util" />
     </key>
   </component>
   <component name="RestServicesNavigator">
@@ -173,7 +178,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.AuthServerApplication">
+  <component name="RunManager" selected="Spring Boot.DiscoveryApplication">
     <configuration name="CodeGenerator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.tz.authserver.generator.CodeGenerator" />
       <module name="tz-spring-cloud-auth-server" />
@@ -255,6 +260,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="DiscoveryApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="tz-spring-cloud-discovery" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.tz.discovery.DiscoveryApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ZuulApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="tz-spring-cloud-zuul" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.tz.zuul.ZuulApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Spring Boot.AuthServerApplication" />
@@ -273,7 +292,7 @@
           <expand>
             <path>
               <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@6e825cac" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@183afdf7" type="7427dc5b:ServiceModel$ServiceGroupNode" />
             </path>
           </expand>
           <select />
@@ -311,6 +330,10 @@
       <workItem from="1577672042051" duration="4158000" />
       <workItem from="1577685852140" duration="88000" />
       <workItem from="1577686438236" duration="3089000" />
+      <workItem from="1577695382681" duration="154000" />
+      <workItem from="1577695553017" duration="3989000" />
+      <workItem from="1577700748920" duration="729000" />
+      <workItem from="1577701933393" duration="3109000" />
     </task>
     <task id="LOCAL-00001" summary="jdbc 保存客户端详情">
       <created>1577676542995</created>

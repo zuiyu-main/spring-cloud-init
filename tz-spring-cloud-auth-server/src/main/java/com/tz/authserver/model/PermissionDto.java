@@ -3,7 +3,7 @@ package com.tz.authserver.model;
 import lombok.Data;
 
 /**
- * @author cxt
+ * @author tz
  */
 @Data
 public class PermissionDto {

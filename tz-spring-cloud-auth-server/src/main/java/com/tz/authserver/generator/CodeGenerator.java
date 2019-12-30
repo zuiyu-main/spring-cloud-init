@@ -25,7 +25,8 @@ public class CodeGenerator {
     /**
      * <p>
      * 读取控制台内容
-     * 表名： oauth_client_details,oauth_code
+     * 授权认证 表名： oauth_client_details,oauth_code
+     * sys： sys_permission,sys_role,sys_role_permission,sys_user,sys_user_role
      * </p>
      */
     public static String scanner(String tip) {

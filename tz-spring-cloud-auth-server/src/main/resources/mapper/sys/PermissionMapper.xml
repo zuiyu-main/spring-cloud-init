@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.tz.authserver.sys.mapper.PermissionMapper">
+
+    <select id="findPermissionsByUserId" resultType="java.lang.String">
+        select permission from sys_permission d where d.id in(
+            select permission_id from sys_role_permission c where c.role_id in (
+                select role_id from sys_user_role b where b.user_id = #{userId}
+            )
+        )
+    </select>
+</mapper>

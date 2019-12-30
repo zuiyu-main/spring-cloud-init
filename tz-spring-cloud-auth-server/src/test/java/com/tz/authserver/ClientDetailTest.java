@@ -20,13 +20,15 @@ import java.time.LocalDateTime;
  * @Date 2019-12-30 10:36
  */
 @SpringBootTest
-@RunWith(SpringRunner.class)
+//@RunWith(SpringRunner.class)
 public class ClientDetailTest {
     @Autowired
     private OauthClientDetailsMapper oauthClientDetailsMapper;
     @Test
     public void createBCryptPw(){
-        String hashpw = BCrypt.hashpw("secret", BCrypt.gensalt());
+        String gensalt = BCrypt.gensalt();
+        System.out.println(gensalt);
+        String hashpw = BCrypt.hashpw("123", gensalt);
         System.out.println(hashpw);
     }
     @Test

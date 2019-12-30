@@ -1,5 +1,6 @@
 package com.tz.authserver.model;
 
+import lombok.Builder;
 import lombok.Data;
 
 /**
@@ -9,10 +10,10 @@ import lombok.Data;
  * @Date 2019-12-25 16:08
  */
 @Data
+@Builder
 public class UserDto {
-    private String id;
+    private Long id;
     private String username;
     private String password;
     private String fullname;
-    private String mobile;
 }

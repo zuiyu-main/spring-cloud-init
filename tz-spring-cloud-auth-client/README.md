@@ -68,3 +68,32 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 }
 ```
 # 第一部分 end
+
+# 第二部分配置资源服务器拦截，对应zuul拦截器，此处解析token放入request
+* 配置拦截器
+`
+@Component
+public class TokenAuthenticationFilter extends OncePerRequestFilter {
+
+    @Override
+    protected void doFilterInternal(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse, FilterChain filterChain) throws ServletException, IOException {
+
+        // 解析请求头token
+        String token = httpServletRequest.getHeader("json-token");
+        if(null != token){
+            String json = EncryptUtil.decodeUTF8StringBase64(token);
+            JSONObject jsonObject = JSON.parseObject(json);
+            UserDto userDto = JSON.parseObject(jsonObject.getString("principal"), UserDto.class);
+            JSONArray authoritiesArray = jsonObject.getJSONArray("authorities");
+            String[] authorities = authoritiesArray.toArray(new String[authoritiesArray.size()]);
+            // 用户信息权限封装token
+            UsernamePasswordAuthenticationToken authenticationToken =
+                    new UsernamePasswordAuthenticationToken(userDto,null, AuthorityUtils.createAuthorityList(authorities));
+            authenticationToken.setDetails(new WebAuthenticationDetailsSource().buildDetails(httpServletRequest));
+            // 将authenticationToken填充到安全上下文
+            SecurityContextHolder.getContext().setAuthentication(authenticationToken);
+        }
+        filterChain.doFilter(httpServletRequest,httpServletResponse);
+    }
+}
+`

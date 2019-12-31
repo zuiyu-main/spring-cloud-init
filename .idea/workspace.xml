@@ -1,47 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8b6eeba5-3deb-4cd8-a8e0-f38a8bbff585" name="Default Changelist" comment="jdbc 保存客户端详情">
-      <change afterPath="$PROJECT_DIR$/tz-spring-cloud-discovery/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tz-spring-cloud-discovery/.mvn/wrapper/MavenWrapperDownloader.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tz-spring-cloud-discovery/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tz-spring-cloud-discovery/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tz-spring-cloud-discovery/mvnw" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tz-spring-cloud-discovery/mvnw.cmd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tz-spring-cloud-discovery/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tz-spring-cloud-discovery/src/main/java/com/tz/discovery/DiscoveryApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tz-spring-cloud-discovery/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tz-spring-cloud-discovery/src/test/java/com/tz/discovery/DiscoveryApplicationTests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tz-spring-cloud-zuul/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tz-spring-cloud-zuul/.mvn/wrapper/MavenWrapperDownloader.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tz-spring-cloud-zuul/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tz-spring-cloud-zuul/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tz-spring-cloud-zuul/mvnw" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tz-spring-cloud-zuul/mvnw.cmd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tz-spring-cloud-zuul/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tz-spring-cloud-zuul/src/main/java/com/tz/zuul/ZuulApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tz-spring-cloud-zuul/src/main/java/com/tz/zuul/config/ResourceServerConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tz-spring-cloud-zuul/src/main/java/com/tz/zuul/config/TokenConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tz-spring-cloud-zuul/src/main/java/com/tz/zuul/config/WebSecurityConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tz-spring-cloud-zuul/src/main/java/com/tz/zuul/config/ZuulConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tz-spring-cloud-zuul/src/main/java/com/tz/zuul/filter/AuthFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tz-spring-cloud-zuul/src/main/java/com/tz/zuul/util/EncryptUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tz-spring-cloud-zuul/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tz-spring-cloud-zuul/src/test/java/com/tz/zuul/ZuulApplicationTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__mysql_mysql_connector_java_8_0_18.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+    <list default="true" id="8b6eeba5-3deb-4cd8-a8e0-f38a8bbff585" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/tz-spring-cloud-auth-client/src/main/java/com/tz/client/filter/TokenAuthenticationFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tz-spring-cloud-auth-client/src/main/java/com/tz/client/model/UserDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tz-spring-cloud-auth-client/src/main/java/com/tz/client/util/EncryptUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tz-spring-cloud-auth-server/src/main/java/com/tz/authserver/config/DruidConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_alibaba_druid_1_1_3.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tz-spring-cloud-auth-client/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/tz-spring-cloud-auth-client/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tz-spring-cloud-auth-client/src/main/java/com/tz/client/AuthClientApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/tz-spring-cloud-auth-client/src/main/java/com/tz/client/AuthClientApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tz-spring-cloud-auth-client/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/tz-spring-cloud-auth-client/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tz-spring-cloud-auth-client/src/main/java/com/tz/client/config/ResourceServerConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/tz-spring-cloud-auth-client/src/main/java/com/tz/client/config/ResourceServerConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tz-spring-cloud-auth-client/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/tz-spring-cloud-auth-client/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tz-spring-cloud-auth-client/src/main/java/com/tz/client/controller/ResourceController.java" beforeDir="false" afterPath="$PROJECT_DIR$/tz-spring-cloud-auth-client/src/main/java/com/tz/client/controller/ResourceController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tz-spring-cloud-auth-server/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/tz-spring-cloud-auth-server/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tz-spring-cloud-auth-server/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/tz-spring-cloud-auth-server/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tz-spring-cloud-discovery/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/tz-spring-cloud-discovery/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tz-spring-cloud-zuul/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/tz-spring-cloud-zuul/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tz-spring-cloud-zuul/src/main/java/com/tz/zuul/filter/AuthFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/tz-spring-cloud-zuul/src/main/java/com/tz/zuul/filter/AuthFilter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tz-spring-cloud.iml" beforeDir="false" afterPath="$PROJECT_DIR$/tz-spring-cloud.iml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -147,6 +122,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.tz.client.util" />
       <recent name="com.tz.zuul.config" />
       <recent name="com.tz.client.config" />
       <recent name="com.tz.authserver.model" />
@@ -289,12 +265,7 @@
       <serviceView>
         <option name="contentProportion" value="0.20656934" />
         <treeState>
-          <expand>
-            <path>
-              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@183afdf7" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-            </path>
-          </expand>
+          <expand />
           <select />
         </treeState>
       </serviceView>
@@ -333,7 +304,10 @@
       <workItem from="1577695382681" duration="154000" />
       <workItem from="1577695553017" duration="3989000" />
       <workItem from="1577700748920" duration="729000" />
-      <workItem from="1577701933393" duration="3109000" />
+      <workItem from="1577701933393" duration="3249000" />
+      <workItem from="1577757161486" duration="1492000" />
+      <workItem from="1577758964135" duration="3028000" />
+      <workItem from="1577774937432" duration="654000" />
     </task>
     <task id="LOCAL-00001" summary="jdbc 保存客户端详情">
       <created>1577676542995</created>
@@ -342,7 +316,14 @@
       <option name="project" value="LOCAL" />
       <updated>1577676542995</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="加入注册中心，zuul">
+      <created>1577706502244</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1577706502244</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -364,6 +345,7 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="jdbc 保存客户端详情" />
-    <option name="LAST_COMMIT_MESSAGE" value="jdbc 保存客户端详情" />
+    <MESSAGE value="加入注册中心，zuul" />
+    <option name="LAST_COMMIT_MESSAGE" value="加入注册中心，zuul" />
   </component>
 </project>

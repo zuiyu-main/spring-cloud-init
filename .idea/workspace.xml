@@ -2,22 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8b6eeba5-3deb-4cd8-a8e0-f38a8bbff585" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/tz-spring-cloud-auth-client/src/main/java/com/tz/client/filter/TokenAuthenticationFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tz-spring-cloud-auth-client/src/main/java/com/tz/client/model/UserDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tz-spring-cloud-auth-client/src/main/java/com/tz/client/util/EncryptUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tz-spring-cloud-auth-server/src/main/java/com/tz/authserver/config/DruidConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_alibaba_druid_1_1_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tz-spring-cloud-auth-client/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/tz-spring-cloud-auth-client/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tz-spring-cloud-auth-client/src/main/java/com/tz/client/config/ResourceServerConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/tz-spring-cloud-auth-client/src/main/java/com/tz/client/config/ResourceServerConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tz-spring-cloud-auth-client/src/main/java/com/tz/client/controller/ResourceController.java" beforeDir="false" afterPath="$PROJECT_DIR$/tz-spring-cloud-auth-client/src/main/java/com/tz/client/controller/ResourceController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tz-spring-cloud-auth-server/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/tz-spring-cloud-auth-server/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tz-spring-cloud-auth-server/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/tz-spring-cloud-auth-server/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tz-spring-cloud-discovery/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/tz-spring-cloud-discovery/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tz-spring-cloud-zuul/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/tz-spring-cloud-zuul/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tz-spring-cloud-zuul/src/main/java/com/tz/zuul/filter/AuthFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/tz-spring-cloud-zuul/src/main/java/com/tz/zuul/filter/AuthFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tz-spring-cloud.iml" beforeDir="false" afterPath="$PROJECT_DIR$/tz-spring-cloud.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -308,6 +295,8 @@
       <workItem from="1577757161486" duration="1492000" />
       <workItem from="1577758964135" duration="3028000" />
       <workItem from="1577774937432" duration="654000" />
+      <workItem from="1577786287715" duration="386000" />
+      <workItem from="1577786925139" duration="78000" />
     </task>
     <task id="LOCAL-00001" summary="jdbc 保存客户端详情">
       <created>1577676542995</created>
@@ -323,7 +312,14 @@
       <option name="project" value="LOCAL" />
       <updated>1577706502244</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="初始模版1.0 搭建完成">
+      <created>1577786338250</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1577786338250</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -346,6 +342,7 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="jdbc 保存客户端详情" />
     <MESSAGE value="加入注册中心，zuul" />
-    <option name="LAST_COMMIT_MESSAGE" value="加入注册中心，zuul" />
+    <MESSAGE value="初始模版1.0 搭建完成" />
+    <option name="LAST_COMMIT_MESSAGE" value="初始模版1.0 搭建完成" />
   </component>
 </project>

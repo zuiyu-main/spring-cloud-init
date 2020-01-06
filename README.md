@@ -5,3 +5,4 @@
 * [auth-server(oauth2.0) 认证服务器](https://github.com/TianPuJun/spring-cloud-init/tree/master/tz-spring-cloud-auth-server)
 * [zuul-service 网关拦截器](https://github.com/TianPuJun/spring-cloud-init/tree/master/tz-spring-cloud-zuul)
 * [eureka-discovery 注册中心](https://github.com/TianPuJun/spring-cloud-init/tree/master/tz-spring-cloud-discovery)
+* [sso](https://github.com/TianPuJun/spring-cloud-init/tree/master/tz-spring-cloud-sso)

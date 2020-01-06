@@ -18,6 +18,7 @@
         <module>tz-spring-cloud-auth-server</module>
         <module>tz-spring-cloud-discovery</module>
         <module>tz-spring-cloud-zuul</module>
+        <module>tz-spring-cloud-sso</module>
     </modules>
 
     <properties>

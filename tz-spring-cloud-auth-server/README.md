@@ -170,7 +170,7 @@ public class AuthorizationServer extends AuthorizationServerConfigurerAdapter {
         security
                 // /oauth/token_key  url 公开
                 .tokenKeyAccess("permitAll()")
-                // /ouath/check_token 公开
+                // /oauth/check_token 公开
                 .checkTokenAccess("permitAll()")
                 // 表单验证，申请令牌
                 .allowFormAuthenticationForClients();

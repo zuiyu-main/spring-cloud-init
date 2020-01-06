@@ -8,8 +8,9 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="tz-spring-cloud-zuul" />
-        <module name="tz-spring-cloud-discovery" />
         <module name="tz-spring-cloud-auth-client" />
+        <module name="tz-spring-cloud-sso" />
+        <module name="tz-spring-cloud-discovery" />
         <module name="tz-spring-cloud-auth-server" />
       </profile>
     </annotationProcessing>
@@ -18,6 +19,7 @@
       <module name="tz-spring-cloud-auth-client" target="1.8" />
       <module name="tz-spring-cloud-auth-server" target="1.8" />
       <module name="tz-spring-cloud-discovery" target="1.8" />
+      <module name="tz-spring-cloud-sso" target="1.8" />
       <module name="tz-spring-cloud-zuul" target="1.8" />
     </bytecodeTargetLevel>
   </component>
@@ -26,6 +28,7 @@
       <module name="tz-spring-cloud-auth-client" options="-parameters" />
       <module name="tz-spring-cloud-auth-server" options="-parameters" />
       <module name="tz-spring-cloud-discovery" options="-parameters" />
+      <module name="tz-spring-cloud-sso" options="-parameters" />
       <module name="tz-spring-cloud-zuul" options="-parameters" />
     </option>
   </component>

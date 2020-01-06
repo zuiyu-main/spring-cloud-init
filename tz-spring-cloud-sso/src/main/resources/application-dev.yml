@@ -1,0 +1,46 @@
+
+security:
+  oauth2:
+    sso:
+      loginPath: /dashboard/login
+    client:
+      accessTokenUri: http://localhost:8762/auth/oauth/token
+      userAuthorizationUri: http://localhost:8762/auth/oauth/authorize
+      clientId: sso1
+      clientSecret: secret
+      scope: ROLE_API
+      registered-redirect-uri: http://localhost:8780/sso/loginSuccess
+#      pre-established-redirect-uri: http://localhost:8762/client/r/r1
+      # 默认true，是否使用默认重定向url，
+      use-current-uri: false
+      authorized-grant-types: authorization_code
+      id: sso1
+    resource:
+      jwt:
+        # jwt 认证的解密的key，与auth服务加密key一致
+        key-value: tz_admin
+      id: sso1
+      serviceId: sso1
+      user-info-uri: http://localhost:8780/dashboard/user
+
+
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/springcloud-oauth2?useUnicode=true
+    username: root
+    password: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    type: com.alibaba.druid.pool.DruidDataSource
+  main:
+    allow-bean-definition-overriding: true
+server:
+  port: 8780
+  servlet:
+    context-path: /sso
+
+logging:
+  level:
+    org.springframework.security: info
+    com.netflix.discovery: 'OFF'
+
+

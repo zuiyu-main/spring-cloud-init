@@ -75,7 +75,22 @@ public class ResourceServerConfig  {
             http.authorizeRequests().antMatchers("/client/**").access("#oauth2.hasScope('ROLE_API')");
         }
     }
+    @Configuration
+    @EnableResourceServer
+    public class SsoServerConfig extends ResourceServerConfigurerAdapter{
+        @Autowired
+        private TokenStore tokenStore;
 
+        @Override
+        public void configure(ResourceServerSecurityConfigurer resources) throws Exception {
+            resources.tokenStore(tokenStore).resourceId("sso1").stateless(true);
+        }
+
+        @Override
+        public void configure(HttpSecurity http) throws Exception {
+            http.authorizeRequests().antMatchers("/sso/**").access("#oauth2.hasScope('ROLE_API')");
+        }
+    }
 
 
 }

@@ -1,7 +1,7 @@
 # 第一部分  start 
 # 资源访问测试
 url: get 
-http://127.0.0.1:8881/client/r1
+http://127.0.0.1:8764/client/r1
 请求头： key = Authorization,value = Bearer + token 
 ## 配置认证url
 ```java

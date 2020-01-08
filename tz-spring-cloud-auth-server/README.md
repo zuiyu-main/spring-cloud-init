@@ -282,20 +282,20 @@ public class AuthServerApplicationTests {
 
 ```
 * 获取验证码，浏览器访问 get 
-http://127.0.0.1:8888/auth/oauth/authorize?client_id=c1&response_type=code&scope=all&redirect_uri=http://www.baidu.com
+http://127.0.0.1:8762/auth/oauth/authorize?client_id=c1&response_type=code&scope=all&redirect_uri=http://www.baidu.com
 * post请求 获取授权码，更改code 为上面url返回的验证码
-http://127.0.0.1:53020/auth/oauth/token?client_id=c1&client_secret=secret&grant_type=authorization_code&code=BzdODc&redirect_uri=http://www.baidu.com
+http://127.0.0.1:8762/auth/oauth/token?client_id=c1&client_secret=secret&grant_type=authorization_code&code=BzdODc&redirect_uri=http://www.baidu.com
 
 ## 简化模式（单页面应用）浏览器访问get
-http://127.0.0.1:8888/auth/oauth/authorize?client_id=c1&response_type=token&scope=all&redirect_uri=http://www.baidu.com
+http://127.0.0.1:8762/auth/oauth/authorize?client_id=c1&response_type=token&scope=all&redirect_uri=http://www.baidu.com
 登录成功之后会返回token，适合没有服务端的应用
 https://www.baidu.com/#access_token=2042dddd-726b-4104-a533-9a7f85cab00f&token_type=bearer&expires_in=7199
 
 ## 密码模式 post
-http://127.0.0.1:8888/auth/oauth/token?client_id=c1&client_secret=secret&grant_type=password&username=tz&password=123&redirect_uri=http://www.baidu.com
+http://127.0.0.1:8762/auth/oauth/token?client_id=c1&client_secret=secret&grant_type=password&username=tz&password=123&redirect_uri=http://www.baidu.com
 
 ## 客户端模式 (没有刷新令牌，内部应用) post
-http://127.0.0.1:8888/auth/oauth/token?client_id=c1&client_secret=secret&grant_type=client_credentials 
+http://127.0.0.1:8762/auth/oauth/token?client_id=c1&client_secret=secret&grant_type=client_credentials 
 
 ## 后续见client README第一部分
 

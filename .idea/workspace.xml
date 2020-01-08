@@ -1,34 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8b6eeba5-3deb-4cd8-a8e0-f38a8bbff585" name="Default Changelist" comment="更新README.md">
-      <change afterPath="$PROJECT_DIR$/tz-spring-cloud-sso/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tz-spring-cloud-sso/.mvn/wrapper/MavenWrapperDownloader.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tz-spring-cloud-sso/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tz-spring-cloud-sso/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tz-spring-cloud-sso/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tz-spring-cloud-sso/mvnw" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tz-spring-cloud-sso/mvnw.cmd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tz-spring-cloud-sso/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tz-spring-cloud-sso/src/main/java/com/tz/sso/SsoApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tz-spring-cloud-sso/src/main/java/com/tz/sso/config/LoginConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tz-spring-cloud-sso/src/main/java/com/tz/sso/controller/IndexController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tz-spring-cloud-sso/src/main/java/com/tz/sso/controller/LoginController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tz-spring-cloud-sso/src/main/resources/application-dev.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tz-spring-cloud-sso/src/main/resources/application-github.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tz-spring-cloud-sso/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tz-spring-cloud-sso/src/test/java/com/tz/sso/SsoApplicationTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+    <list default="true" id="8b6eeba5-3deb-4cd8-a8e0-f38a8bbff585" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tz-spring-cloud-auth-server/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/tz-spring-cloud-auth-server/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tz-spring-cloud-auth-server/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/tz-spring-cloud-auth-server/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tz-spring-cloud-zuul/src/main/java/com/tz/zuul/config/ResourceServerConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/tz-spring-cloud-zuul/src/main/java/com/tz/zuul/config/ResourceServerConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tz-spring-cloud-zuul/src/main/java/com/tz/zuul/config/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/tz-spring-cloud-zuul/src/main/java/com/tz/zuul/config/WebSecurityConfig.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -349,7 +323,8 @@
       <workItem from="1578273601427" duration="489000" />
       <workItem from="1578276651399" duration="2559000" />
       <workItem from="1578299133131" duration="304000" />
-      <workItem from="1578301502088" duration="4543000" />
+      <workItem from="1578301502088" duration="4717000" />
+      <workItem from="1578358999867" duration="25000" />
     </task>
     <task id="LOCAL-00001" summary="jdbc 保存客户端详情">
       <created>1577676542995</created>
@@ -379,7 +354,14 @@
       <option name="project" value="LOCAL" />
       <updated>1577787035759</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="sso module">
+      <created>1578308166507</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1578308166507</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -404,7 +386,8 @@
     <MESSAGE value="加入注册中心，zuul" />
     <MESSAGE value="初始模版1.0 搭建完成" />
     <MESSAGE value="更新README.md" />
-    <option name="LAST_COMMIT_MESSAGE" value="更新README.md" />
+    <MESSAGE value="sso module" />
+    <option name="LAST_COMMIT_MESSAGE" value="sso module" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -1,8 +1,10 @@
 package com.tz.client.controller;
 
 import com.tz.client.model.UserDto;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContext;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -15,6 +17,9 @@ import org.springframework.web.bind.annotation.RestController;
  */
 @RestController
 public class ResourceController {
+
+    @Value("${server.port}")
+    public String port;
     /**
      * PreAuthorize 拥有p1权限即可访问r1
      * @return
@@ -30,4 +35,11 @@ public class ResourceController {
     public String r2(){
         return "访问资源r2";
     }
+
+    @GetMapping("/test")
+    public String test(){
+        SecurityContext context = SecurityContextHolder.getContext();
+        return "ccc"+port;
+    }
+
 }

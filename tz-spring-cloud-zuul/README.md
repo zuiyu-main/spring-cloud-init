@@ -59,3 +59,6 @@ zuul:
       stripPrefix: false
       path: /client/**
 `
+# 自定义负载均衡策略
+ [自定义负载均衡，可定义单个服务ip负载均衡](https://blog.csdn.net/ypp91zr/article/details/88312708)
+ [负载均衡算法](https://blog.csdn.net/ypp91zr/article/details/88270403)

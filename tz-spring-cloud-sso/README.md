@@ -5,7 +5,7 @@
 * [springboot security ](https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#boot-features-security-oauth2-client)
 
 # 配置拦截url，申请token,@EnableOAuth2Sso开启sso
-`
+```
 @Configuration
 @EnableOAuth2Sso
 public class LoginConfig extends WebSecurityConfigurerAdapter {
@@ -20,9 +20,9 @@ public class LoginConfig extends WebSecurityConfigurerAdapter {
                 .logoutSuccessUrl("/");
     }
     }
-`
+```
 # 暂定登录成功跳转url，和数据库客户端信息保持一致
-`
+```
 @RestController
 public class IndexController {
     @RequestMapping("/loginSuccess")
@@ -39,9 +39,9 @@ public class IndexController {
         return "login Success";
     }
 }
-`
+```
 # yml配置oauth
-`
+```
 security:
   oauth2:
     sso:
@@ -65,5 +65,5 @@ security:
       id: sso1
       serviceId: sso1
       user-info-uri: http://localhost:8780/dashboard/user
-`
+```
 

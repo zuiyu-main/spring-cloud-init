@@ -62,3 +62,7 @@ zuul:
 # 自定义负载均衡策略
  [自定义负载均衡，可定义单个服务ip负载均衡](https://blog.csdn.net/ypp91zr/article/details/88312708)
  [负载均衡算法](https://blog.csdn.net/ypp91zr/article/details/88270403)
+ * gateway 配置（注意gateway版本2.1+）
+ [源码解析](http://www.ranxiao.top/2019/06/20/spring-cloud-gateway-default-load-balancer-rule/)
+ [自定义配置](https://www.cnblogs.com/wgslucky/p/10537561.html)
+ 

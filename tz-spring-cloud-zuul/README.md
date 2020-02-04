@@ -5,7 +5,7 @@
 # 配置微服务拦截
 * ResourceServerConfig 添加服务的拦截即可
 * 例如 配置资源服务
-`
+```
    @Configuration
     @EnableResourceServer
     public class ClientServerConfig extends ResourceServerConfigurerAdapter{
@@ -22,9 +22,9 @@
             http.authorizeRequests().antMatchers("/client/**").access("#oauth2.hasScope('ROLE_API')");
         }
     }
-`
+```
 * 配置验证服务器访问
-`
+```
 
     @Configuration
     @EnableResourceServer
@@ -42,9 +42,9 @@
             http.authorizeRequests().antMatchers("/auth/**").permitAll();
         }
     }
-`
+```
 * yml 对应url拦截配置
-`
+```
 zuul:
   retryable: true
   ignored-services: "*"
@@ -58,7 +58,7 @@ zuul:
     client-service:
       stripPrefix: false
       path: /client/**
-`
+```
 # 自定义负载均衡策略
  [自定义负载均衡，可定义单个服务ip负载均衡](https://blog.csdn.net/ypp91zr/article/details/88312708)
  [负载均衡算法](https://blog.csdn.net/ypp91zr/article/details/88270403)

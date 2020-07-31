@@ -4,6 +4,7 @@ url: get
 http://127.0.0.1:8764/client/r1
 请求头： key = Authorization,value = Bearer + token 
 ## 配置认证url
+
 ```java
 @SpringBootConfiguration
 @EnableResourceServer
@@ -70,8 +71,10 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 # 第一部分 end
 
 # 第二部分配置资源服务器拦截，对应zuul拦截器，此处解析token放入request
+
 * 配置拦截器
-`
+
+```
 @Component
 public class TokenAuthenticationFilter extends OncePerRequestFilter {
 
@@ -96,4 +99,4 @@ public class TokenAuthenticationFilter extends OncePerRequestFilter {
         filterChain.doFilter(httpServletRequest,httpServletResponse);
     }
 }
-`
+```

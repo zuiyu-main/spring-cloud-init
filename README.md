@@ -6,3 +6,8 @@
 * [zuul-service 网关拦截器](https://github.com/TianPuJun/spring-cloud-init/tree/master/tz-spring-cloud-zuul)
 * [eureka-discovery 注册中心](https://github.com/TianPuJun/spring-cloud-init/tree/master/tz-spring-cloud-discovery)
 * [sso](https://github.com/TianPuJun/spring-cloud-init/tree/master/tz-spring-cloud-sso)
+
+## 参考
+README看起来不是很懂的下面放上两个整理之后的链接，可以参考
+* [授权服务器搭建](https://mp.weixin.qq.com/s/2KwHxuJtcIjJe_piP1Ve4w)
+* [资源服务器搭建](https://mp.weixin.qq.com/s/PfC4H5Sc0QtQgcRVgIsVwg)

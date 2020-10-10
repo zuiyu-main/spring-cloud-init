@@ -4,10 +4,19 @@
     <option name="GROUP_BY_SEVERITY" value="true" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8b6eeba5-3deb-4cd8-a8e0-f38a8bbff585" name="Default Changelist" comment="">
+    <list default="true" id="8b6eeba5-3deb-4cd8-a8e0-f38a8bbff585" name="Default Changelist" comment="auth-client README.md 格式更新,增加整体逻辑梳理">
+      <change afterPath="$PROJECT_DIR$/tz-spring-cloud-zuul/src/main/java/com/tz/zuul/config/SleuthConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tz-spring-cloud-auth-client/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/tz-spring-cloud-auth-client/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tz-spring-cloud-auth-client/src/main/java/com/tz/client/controller/ResourceController.java" beforeDir="false" afterPath="$PROJECT_DIR$/tz-spring-cloud-auth-client/src/main/java/com/tz/client/controller/ResourceController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tz-spring-cloud-auth-client/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/tz-spring-cloud-auth-client/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tz-spring-cloud-auth-server/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/tz-spring-cloud-auth-server/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tz-spring-cloud-discovery/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/tz-spring-cloud-discovery/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tz-spring-cloud-sso/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/tz-spring-cloud-sso/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tz-spring-cloud-sso/src/main/resources/application-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/tz-spring-cloud-sso/src/main/resources/application-dev.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tz-spring-cloud-zuul/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/tz-spring-cloud-zuul/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tz-spring-cloud.iml" beforeDir="false" afterPath="$PROJECT_DIR$/tz-spring-cloud.iml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,6 +71,12 @@
       <MavenImportingSettings>
         <option name="importAutomatically" value="true" />
       </MavenImportingSettings>
+    </option>
+    <option name="enabledProfiles">
+      <list>
+        <option value="pro" />
+        <option value="dev" />
+      </list>
     </option>
   </component>
   <component name="MavenRunner">
@@ -139,7 +154,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.AuthClientApplication">
+  <component name="RunManager" selected="Spring Boot.ZuulApplication">
     <configuration name="CodeGenerator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.tz.authserver.generator.CodeGenerator" />
       <module name="tz-spring-cloud-auth-server" />
@@ -271,6 +286,11 @@
               <path>
                 <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
                 <item name="Spring Boot" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+                <item name="Running" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              </path>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="Spring Boot" type="7427dc5b:ServiceModel$ServiceGroupNode" />
                 <item name="Not Started" type="7427dc5b:ServiceModel$ServiceGroupNode" />
               </path>
             </expand>
@@ -362,7 +382,17 @@
       <workItem from="1594111115700" duration="22000" />
       <workItem from="1594630943958" duration="274000" />
       <workItem from="1594631251796" duration="8000" />
-      <workItem from="1596157915905" duration="409000" />
+      <workItem from="1596157915905" duration="568000" />
+      <workItem from="1596158489736" duration="512000" />
+      <workItem from="1596159006406" duration="395000" />
+      <workItem from="1596526984194" duration="313000" />
+      <workItem from="1599115206994" duration="855000" />
+      <workItem from="1599116406365" duration="29000" />
+      <workItem from="1599116454070" duration="1433000" />
+      <workItem from="1599125142518" duration="309000" />
+      <workItem from="1599125456718" duration="31000" />
+      <workItem from="1599125507737" duration="985000" />
+      <workItem from="1602314040458" duration="6548000" />
     </task>
     <task id="LOCAL-00001" summary="jdbc 保存客户端详情">
       <created>1577676542995</created>
@@ -427,7 +457,14 @@
       <option name="project" value="LOCAL" />
       <updated>1580811345574</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="auth-client README.md 格式更新,增加整体逻辑梳理">
+      <created>1596158393501</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1596158393501</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -456,16 +493,85 @@
     <MESSAGE value="添加zuul feign负载均衡，自定义负载均衡算法" />
     <MESSAGE value="README.md 格式更新" />
     <MESSAGE value="zuul README.md 格式更新" />
-    <option name="LAST_COMMIT_MESSAGE" value="zuul README.md 格式更新" />
+    <MESSAGE value="auth-client README.md 格式更新,增加整体逻辑梳理" />
+    <option name="LAST_COMMIT_MESSAGE" value="auth-client README.md 格式更新,增加整体逻辑梳理" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="186" y="23" key="CommitChangelistDialog2" timestamp="1596158361682">
+    <state x="186" y="23" key="CommitChangelistDialog2" timestamp="1602325407705">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="186" y="23" key="CommitChangelistDialog2/0.0.1440.900@0.0.1440.900" timestamp="1596158361682" />
-    <state x="509" y="374" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1596157993666">
+    <state x="186" y="23" key="CommitChangelistDialog2/0.0.1440.900/-1920.105.1920.1057@0.0.1440.900" timestamp="1602325407705" />
+    <state x="186" y="23" key="CommitChangelistDialog2/0.0.1440.900/-1920.82.1920.1080@0.0.1440.900" timestamp="1602323955888" />
+    <state x="186" y="23" key="CommitChangelistDialog2/0.0.1440.900@0.0.1440.900" timestamp="1596158393314" />
+    <state x="141" y="78" key="DiffContextDialog" timestamp="1602323953902">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
+    <state x="141" y="78" key="DiffContextDialog/0.0.1440.900/-1920.82.1920.1080@0.0.1440.900" timestamp="1602323953902" />
+    <state width="958" height="340" key="GridCell.Tab.0.bottom" timestamp="1602325355072">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="958" height="340" key="GridCell.Tab.0.bottom/0.0.1440.900/-1920.105.1920.1057@0.0.1440.900" timestamp="1602324784436" />
+    <state width="958" height="340" key="GridCell.Tab.0.bottom/0.0.1440.900/-1920.82.1920.1080@0.0.1440.900" timestamp="1602325355072" />
+    <state width="958" height="340" key="GridCell.Tab.0.bottom/0.23.1440.877/-1920.105.1920.1057@0.23.1440.877" timestamp="1602324588482" />
+    <state width="958" height="340" key="GridCell.Tab.0.center" timestamp="1602325355071">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="958" height="340" key="GridCell.Tab.0.center/0.0.1440.900/-1920.105.1920.1057@0.0.1440.900" timestamp="1602324784435" />
+    <state width="958" height="340" key="GridCell.Tab.0.center/0.0.1440.900/-1920.82.1920.1080@0.0.1440.900" timestamp="1602325355071" />
+    <state width="958" height="340" key="GridCell.Tab.0.center/0.23.1440.877/-1920.105.1920.1057@0.23.1440.877" timestamp="1602324588480" />
+    <state width="958" height="340" key="GridCell.Tab.0.left" timestamp="1602325355070">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="958" height="340" key="GridCell.Tab.0.left/0.0.1440.900/-1920.105.1920.1057@0.0.1440.900" timestamp="1602324784433" />
+    <state width="958" height="340" key="GridCell.Tab.0.left/0.0.1440.900/-1920.82.1920.1080@0.0.1440.900" timestamp="1602325355070" />
+    <state width="958" height="340" key="GridCell.Tab.0.left/0.23.1440.877/-1920.105.1920.1057@0.23.1440.877" timestamp="1602324588480" />
+    <state width="958" height="340" key="GridCell.Tab.0.right" timestamp="1602325355071">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="958" height="340" key="GridCell.Tab.0.right/0.0.1440.900/-1920.105.1920.1057@0.0.1440.900" timestamp="1602324784435" />
+    <state width="958" height="340" key="GridCell.Tab.0.right/0.0.1440.900/-1920.82.1920.1080@0.0.1440.900" timestamp="1602325355071" />
+    <state width="958" height="340" key="GridCell.Tab.0.right/0.23.1440.877/-1920.105.1920.1057@0.23.1440.877" timestamp="1602324588481" />
+    <state width="958" height="340" key="GridCell.Tab.1.bottom" timestamp="1602325355074">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="958" height="340" key="GridCell.Tab.1.bottom/0.0.1440.900/-1920.105.1920.1057@0.0.1440.900" timestamp="1602324784438" />
+    <state width="958" height="340" key="GridCell.Tab.1.bottom/0.0.1440.900/-1920.82.1920.1080@0.0.1440.900" timestamp="1602325355074" />
+    <state width="958" height="340" key="GridCell.Tab.1.bottom/0.23.1440.877/-1920.105.1920.1057@0.23.1440.877" timestamp="1602324588484" />
+    <state width="958" height="340" key="GridCell.Tab.1.center" timestamp="1602325355073">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="958" height="340" key="GridCell.Tab.1.center/0.0.1440.900/-1920.105.1920.1057@0.0.1440.900" timestamp="1602324784437" />
+    <state width="958" height="340" key="GridCell.Tab.1.center/0.0.1440.900/-1920.82.1920.1080@0.0.1440.900" timestamp="1602325355073" />
+    <state width="958" height="340" key="GridCell.Tab.1.center/0.23.1440.877/-1920.105.1920.1057@0.23.1440.877" timestamp="1602324588483" />
+    <state width="958" height="340" key="GridCell.Tab.1.left" timestamp="1602325355072">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="958" height="340" key="GridCell.Tab.1.left/0.0.1440.900/-1920.105.1920.1057@0.0.1440.900" timestamp="1602324784437" />
+    <state width="958" height="340" key="GridCell.Tab.1.left/0.0.1440.900/-1920.82.1920.1080@0.0.1440.900" timestamp="1602325355072" />
+    <state width="958" height="340" key="GridCell.Tab.1.left/0.23.1440.877/-1920.105.1920.1057@0.23.1440.877" timestamp="1602324588482" />
+    <state width="958" height="340" key="GridCell.Tab.1.right" timestamp="1602325355073">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="958" height="340" key="GridCell.Tab.1.right/0.0.1440.900/-1920.105.1920.1057@0.0.1440.900" timestamp="1602324784438" />
+    <state width="958" height="340" key="GridCell.Tab.1.right/0.0.1440.900/-1920.82.1920.1080@0.0.1440.900" timestamp="1602325355073" />
+    <state width="958" height="340" key="GridCell.Tab.1.right/0.23.1440.877/-1920.105.1920.1057@0.23.1440.877" timestamp="1602324588484" />
+    <state x="258" y="113" key="Maven.ArtifactSearchDialog" timestamp="1602319108806">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="258" y="113" key="Maven.ArtifactSearchDialog/0.0.1440.900/-1920.82.1920.1080@0.0.1440.900" timestamp="1602319108806" />
+    <state x="229" y="89" key="SettingsEditor" timestamp="1599125446425">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="229" y="89" key="SettingsEditor/0.0.1440.900/-1920.82.1920.1080@0.0.1440.900" timestamp="1599125446425" />
+    <state x="320" y="191" key="Vcs.Push.Dialog.v2" timestamp="1596158394573">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="320" y="191" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1596158394573" />
+    <state x="509" y="374" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1602325437061">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="509" y="374" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1440.900/-1920.105.1920.1057@0.0.1440.900" timestamp="1602325437061" />
+    <state x="509" y="374" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1440.900/-1920.82.1920.1080@0.0.1440.900" timestamp="1602323918976" />
     <state x="509" y="374" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1440.900@0.0.1440.900" timestamp="1596157993666" />
   </component>
   <component name="XDebuggerManager">

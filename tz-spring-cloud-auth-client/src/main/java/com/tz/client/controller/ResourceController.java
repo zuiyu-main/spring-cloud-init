@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 /**
  * @author tz
- * @Classname RescourseController
+ * @Classname ResourceController
  * @Description 测试资源控制
  * @Date 2019-12-28 11:58
  */

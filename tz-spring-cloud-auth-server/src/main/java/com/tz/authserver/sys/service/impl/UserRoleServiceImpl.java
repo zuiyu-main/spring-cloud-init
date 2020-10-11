@@ -1,9 +1,9 @@
 package com.tz.authserver.sys.service.impl;
 
+import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.tz.authserver.sys.entity.UserRole;
 import com.tz.authserver.sys.mapper.UserRoleMapper;
 import com.tz.authserver.sys.service.IUserRoleService;
-import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import org.springframework.stereotype.Service;
 
 /**

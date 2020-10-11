@@ -1,10 +1,9 @@
 package com.tz.authserver.service;
 
 import com.alibaba.fastjson.JSON;
-import com.tz.authserver.model.UserDto;
-import com.tz.authserver.sys.entity.Permission;
 import com.tz.authserver.sys.mapper.PermissionMapper;
 import com.tz.authserver.sys.mapper.UserMapper;
+import com.tz.base.model.UserDto;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.User;

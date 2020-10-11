@@ -59,4 +59,5 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 // 支持表单登录
                 .formLogin();
     }
+
 }

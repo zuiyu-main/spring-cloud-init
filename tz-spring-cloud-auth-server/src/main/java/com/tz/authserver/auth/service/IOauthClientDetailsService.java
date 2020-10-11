@@ -1,7 +1,7 @@
 package com.tz.authserver.auth.service;
 
-import com.tz.authserver.auth.entity.OauthClientDetails;
 import com.baomidou.mybatisplus.extension.service.IService;
+import com.tz.authserver.auth.entity.OauthClientDetails;
 
 /**
  * <p>

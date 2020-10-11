@@ -1,8 +1,7 @@
 package com.tz.authserver.sys.mapper;
 
-import com.tz.authserver.sys.entity.Permission;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import org.apache.ibatis.annotations.Mapper;
+import com.tz.authserver.sys.entity.Permission;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;

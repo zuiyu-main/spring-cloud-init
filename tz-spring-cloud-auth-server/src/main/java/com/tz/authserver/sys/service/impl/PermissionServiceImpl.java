@@ -1,9 +1,9 @@
 package com.tz.authserver.sys.service.impl;
 
+import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.tz.authserver.sys.entity.Permission;
 import com.tz.authserver.sys.mapper.PermissionMapper;
 import com.tz.authserver.sys.service.IPermissionService;
-import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import org.springframework.stereotype.Service;
 
 /**

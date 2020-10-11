@@ -19,6 +19,7 @@
         <module>tz-spring-cloud-discovery</module>
         <module>tz-spring-cloud-zuul</module>
         <module>tz-spring-cloud-sso</module>
+        <module>tz-spring-cloud-base</module>
     </modules>
 
     <properties>

@@ -3,7 +3,7 @@ package com.tz.client.filter;
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
-import com.tz.client.model.UserDto;
+import com.tz.base.model.UserDto;
 import com.tz.client.util.EncryptUtil;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.authority.AuthorityUtils;
@@ -40,7 +40,7 @@ public class TokenAuthenticationFilter extends OncePerRequestFilter {
             String[] authorities = authoritiesArray.toArray(new String[authoritiesArray.size()]);
             // 用户信息权限封装token
             UsernamePasswordAuthenticationToken authenticationToken =
-                    new UsernamePasswordAuthenticationToken(userDto,null, AuthorityUtils.createAuthorityList(authorities));
+                    new UsernamePasswordAuthenticationToken(jsonObject.getString("principal"),null, AuthorityUtils.createAuthorityList(authorities));
             authenticationToken.setDetails(new WebAuthenticationDetailsSource().buildDetails(httpServletRequest));
             // 将authenticationToken填充到安全上下文
             SecurityContextHolder.getContext().setAuthentication(authenticationToken);

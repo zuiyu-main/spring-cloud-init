@@ -1,7 +1,6 @@
 package com.tz.zuul.config;
 
 import com.netflix.loadbalancer.IRule;
-import com.netflix.loadbalancer.RandomRule;
 import com.tz.zuul.filter.AuthFilter;
 import com.tz.zuul.filter.UrlRule;
 import org.apache.catalina.filters.CorsFilter;
@@ -11,8 +10,6 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.core.Ordered;
 import org.springframework.web.cors.CorsConfiguration;
 import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
-
-import javax.servlet.FilterRegistration;
 
 /**
  * @author tz

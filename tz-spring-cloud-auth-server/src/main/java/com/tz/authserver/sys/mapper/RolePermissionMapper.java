@@ -1,7 +1,7 @@
 package com.tz.authserver.sys.mapper;
 
-import com.tz.authserver.sys.entity.RolePermission;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import com.tz.authserver.sys.entity.RolePermission;
 
 /**
  * <p>

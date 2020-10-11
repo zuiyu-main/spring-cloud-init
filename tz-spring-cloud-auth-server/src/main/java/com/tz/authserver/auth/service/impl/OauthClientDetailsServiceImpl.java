@@ -1,9 +1,9 @@
 package com.tz.authserver.auth.service.impl;
 
+import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.tz.authserver.auth.entity.OauthClientDetails;
 import com.tz.authserver.auth.mapper.OauthClientDetailsMapper;
 import com.tz.authserver.auth.service.IOauthClientDetailsService;
-import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import org.springframework.stereotype.Service;
 
 /**

@@ -1,7 +1,7 @@
 package com.tz.authserver.sys.service;
 
-import com.tz.authserver.sys.entity.UserRole;
 import com.baomidou.mybatisplus.extension.service.IService;
+import com.tz.authserver.sys.entity.UserRole;
 
 /**
  * <p>

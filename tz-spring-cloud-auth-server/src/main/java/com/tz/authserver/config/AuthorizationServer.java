@@ -95,6 +95,7 @@ public class AuthorizationServer extends AuthorizationServerConfigurerAdapter {
 //                // 资源列表
 //                .resourceIds("res1")
 //                // 该client允许的授权类型，
+//        https://www.oauth.com/oauth2-servers/access-tokens/
 //                .authorizedGrantTypes("authorization_code","password","client_credentials",
 //                        "implicit","refresh_token")
 //                // 允许的授权范围，就是一个标识，read，write

@@ -1,5 +1,5 @@
 -- 客户端授权验证sql
-
+-- https://github.com/spring-projects/spring-security-oauth/blob/master/spring-security-oauth2/src/test/resources/schema.sql
 /*
  Navicat Premium Data Transfer
 

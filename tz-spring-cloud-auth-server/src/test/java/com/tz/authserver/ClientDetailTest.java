@@ -4,9 +4,11 @@ package com.tz.authserver;
 import com.tz.authserver.auth.entity.OauthClientDetails;
 import com.tz.authserver.auth.mapper.OauthClientDetailsMapper;
 import org.junit.Test;
+import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.security.crypto.bcrypt.BCrypt;
+import org.springframework.test.context.junit4.SpringRunner;
 
 import java.time.LocalDateTime;
 
@@ -17,7 +19,7 @@ import java.time.LocalDateTime;
  * @Date 2019-12-30 10:36
  */
 @SpringBootTest
-//@RunWith(SpringRunner.class)
+@RunWith(SpringRunner.class)
 public class ClientDetailTest {
     @Autowired
     private OauthClientDetailsMapper oauthClientDetailsMapper;
@@ -25,7 +27,7 @@ public class ClientDetailTest {
     public void createBCryptPw(){
         String gensalt = BCrypt.gensalt();
         System.out.println(gensalt);
-        String hashpw = BCrypt.hashpw("123", gensalt);
+        String hashpw = BCrypt.hashpw("crawl", gensalt);
         System.out.println(hashpw);
     }
     @Test
@@ -64,6 +66,27 @@ public class ClientDetailTest {
         clientDetails2.setAutoapprove("false");
         oauthClientDetailsMapper.insert(clientDetails1);
         oauthClientDetailsMapper.insert(clientDetails2);
+
+    }
+
+    @Test
+    public void insertClient(){
+        OauthClientDetails clientDetails1 = new OauthClientDetails();
+        clientDetails1.setClientId("crawlClient");
+        clientDetails1.setResourceIds("crawl1");
+        // secret
+        clientDetails1.setClientSecret("$2a$10$HG8kP0eFTCRkYaGW/zWKr.7am1acfm/mwi4AfS4njTvZ3ia8kgDtK");
+        clientDetails1.setScope("ROLE_API");
+        // "authorization_code","password","client_credentials", "implicit","refresh_token"
+        clientDetails1.setAuthorizedGrantTypes("client_credentials");
+        clientDetails1.setWebServerRedirectUri("http://www.baidu.com");
+        clientDetails1.setCreateTime(LocalDateTime.now());
+        clientDetails1.setAccessTokenValidity(7200);
+        clientDetails1.setRefreshTokenValidity(259200);
+        clientDetails1.setArchived(0);
+        clientDetails1.setTrusted(0);
+        clientDetails1.setAutoapprove("false");
+        oauthClientDetailsMapper.insert(clientDetails1);
 
     }
 }

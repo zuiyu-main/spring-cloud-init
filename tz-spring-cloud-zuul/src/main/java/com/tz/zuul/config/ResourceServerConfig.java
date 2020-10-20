@@ -77,6 +77,21 @@ public class ResourceServerConfig  {
             http.authorizeRequests().antMatchers("/sso/**").access("#oauth2.hasScope('ROLE_API')");
         }
     }
+    @Configuration
+    @EnableResourceServer
+    public class ClientCrawlServerConfig extends ResourceServerConfigurerAdapter{
+        @Autowired
+        private TokenStore tokenStore;
 
+        @Override
+        public void configure(ResourceServerSecurityConfigurer resources) throws Exception {
+            resources.tokenStore(tokenStore).resourceId("crawl1").stateless(true);
+        }
+
+        @Override
+        public void configure(HttpSecurity http) throws Exception {
+            http.authorizeRequests().antMatchers("/client/test/**").access("#oauth2.hasScope('ROLE_API')");
+        }
+    }
 
 }

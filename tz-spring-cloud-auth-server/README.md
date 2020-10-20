@@ -1,7 +1,7 @@
 # oauth-server (oauth2.0)
 ## 授权码模式
 * 引入pom依赖
-```
+```text
  <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
@@ -353,7 +353,7 @@ public class TokenConfig {
 * 现在就可以使用jwt令牌了
 ## 资源服务器配置jwt自己认证
 * 定义tokenStore
-```
+```text
 /**
      * jwt
      * 对称加密key
@@ -379,13 +379,13 @@ public class TokenConfig {
     }
 ```
 * ResourceServerConfig校验更改
-```
+```text
     // 注入tokenStore
     @Autowired
     private TokenStore tokenStore;
 ```
 * 配置资源验证服务
- ```
+ ```text
     @Override
     public void configure(ResourceServerSecurityConfigurer resources) throws Exception {
         resources
@@ -402,7 +402,7 @@ public class TokenConfig {
 * mysql配置客户端详情表以及授权码表，sql见resources/db/init.sql
 
 * auth server 配置客户端详情
-```
+```text
  @Override
     public void configure(ClientDetailsServiceConfigurer clients) throws Exception {
         clients.withClientDetails(clientDetailsService);
@@ -427,7 +427,7 @@ public class TokenConfig {
     }
 ```
 * 注册clientDetailBean
-```
+```text
    /**
      * 配置jdbc保存客户端详情的配置1
      * @param dataSource
@@ -441,7 +441,8 @@ public class TokenConfig {
     }
 ```
 * 授权码修改为保存到数据库
-```
+
+```text
 
     @Bean
     public AuthorizationCodeServices authorizationCodeServices(DataSource dataSource) {
@@ -449,3 +450,109 @@ public class TokenConfig {
     }
 ```
 * 到此，jdbc保存授权客户端信息就结束了
+
+## 对称密钥
+* 配置授权服务器签发token,配置与资源服务器相同
+```text
+    @Bean
+    public JwtAccessTokenConverter accessTokenConverter(){
+        JwtAccessTokenConverter converter = new JwtAccessTokenConverter();
+        // 对称密钥，资源服务器使用该密钥验证
+        converter.setSigningKey(SIGNING_KEY);
+        return converter;
+    }
+```
+* 配置资源服务器
+```text
+    @Bean
+    public JwtAccessTokenConverter accessTokenConverter(){
+        JwtAccessTokenConverter converter = new JwtAccessTokenConverter();
+        // 对称密钥，资源服务器使用该密钥验证
+        converter.setSigningKey(SIGNING_KEY);
+        return converter;
+    }
+```
+## 非对称密钥
+* 生成
+keytool -genkey -alias zuiyu -keyalg RSA -keypass 123456 -keystore zuiyu.jks -storepass 123456
+-alias:别名
+-keyalg: 指定密钥使用的加密算法（如 RSA ）
+-validity:过期时间，单位天
+-keystore: 指定存储密钥的密钥库的名称（二进制文件）
+-keypass: 指定生成密钥的密码。
+-storepass: 指定访问密钥库的密码
+
+* JKS 密钥库使用专用格式。建议使用 "keytool -importkeystore -srckeystore zuiyu.jks -destkeystore zuiyu.jks -deststoretype pkcs12" 迁移到行业标准格式 PKCS12。
+* 导出
+keytool -list -rfc --keystore zuiyu.jks | openssl x509 -inform pem -pubkey
+* 生成public_key.txt
+对public中间文件保存文件txt，把jks和txt放到resources/jwt
+
+### jks 不能加载问题解决
+Invalid keystore format
+[maven 官方链接](http://maven.apache.org/plugins/maven-resources-plugin/examples/resource-directory.html)
+
+```text
+        <resources>
+
+            <resource>
+                <directory>src/main/resources/certs</directory>
+                <!-- bootstrap.properties中添加了变量然后修改了pom文件 此处false关闭对certs文件夹下面jks不过滤-->
+                <filtering>false</filtering>
+                <includes>
+                    <include>**/*.jks</include>
+                </includes>
+            </resource>
+        </resources>
+```
+
+* 配置token 解析
+```text
+    @Bean
+    public JwtAccessTokenConverter accessTokenConverter(){
+        JwtAccessTokenConverter converter = new JwtAccessTokenConverter();
+        // 对称密钥，资源服务器使用该密钥验证
+//        converter.setSigningKey(SIGNING_KEY);
+        KeyStoreKeyFactory keyStoreKeyFactory =
+                new KeyStoreKeyFactory(new ClassPathResource("certs/zuiyu.jks"), "123456".toCharArray());
+        converter.setKeyPair(keyStoreKeyFactory.getKeyPair("zuiyu"));
+        return converter;
+    }
+```
+* 资源服务配置公钥
+```text
+    @Bean
+    public JwtAccessTokenConverter accessTokenConverter(){
+        JwtAccessTokenConverter converter = new JwtAccessTokenConverter();
+        // 对称密钥，资源服务器使用该密钥验证
+//        converter.setSigningKey(SIGNING_KEY);
+        Resource resource = new ClassPathResource("certs/public_key.txt");
+        String publicKey = "";
+        try {
+            publicKey = InputStream2String(resource.getInputStream());
+        } catch (final IOException e) {
+            throw new RuntimeException(e);
+        }
+        converter.setVerifierKey(publicKey);
+        return converter;
+    }
+    public static String InputStream2String(InputStream in) {
+        InputStreamReader reader = null;
+        try {
+            reader = new InputStreamReader(in, "UTF-8");
+        } catch (UnsupportedEncodingException e1) {
+            e1.printStackTrace();
+        }
+        BufferedReader br = new BufferedReader(reader);
+        StringBuilder sb = new StringBuilder();
+        String line = "";
+        try {
+            while ((line = br.readLine()) != null) {
+                sb.append(line);
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return sb.toString();
+    }
+``` 

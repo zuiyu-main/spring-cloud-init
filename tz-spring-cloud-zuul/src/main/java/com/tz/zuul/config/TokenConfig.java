@@ -2,9 +2,13 @@ package com.tz.zuul.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.core.io.ClassPathResource;
+import org.springframework.core.io.Resource;
 import org.springframework.security.oauth2.provider.token.TokenStore;
 import org.springframework.security.oauth2.provider.token.store.JwtAccessTokenConverter;
 import org.springframework.security.oauth2.provider.token.store.JwtTokenStore;
+
+import java.io.*;
 
 /**
  * @author tz
@@ -34,7 +38,35 @@ public class TokenConfig {
     public JwtAccessTokenConverter accessTokenConverter(){
         JwtAccessTokenConverter converter = new JwtAccessTokenConverter();
         // 对称密钥，资源服务器使用该密钥验证
-        converter.setSigningKey(SIGNING_KEY);
+//        converter.setSigningKey(SIGNING_KEY);
+        Resource resource = new ClassPathResource("certs/public_key.txt");
+        String publicKey = "";
+        try {
+            publicKey = InputStream2String(resource.getInputStream());
+        } catch (final IOException e) {
+            throw new RuntimeException(e);
+        }
+        converter.setVerifierKey(publicKey);
         return converter;
     }
+    public static String InputStream2String(InputStream in) {
+        InputStreamReader reader = null;
+        try {
+            reader = new InputStreamReader(in, "UTF-8");
+        } catch (UnsupportedEncodingException e1) {
+            e1.printStackTrace();
+        }
+        BufferedReader br = new BufferedReader(reader);
+        StringBuilder sb = new StringBuilder();
+        String line = "";
+        try {
+            while ((line = br.readLine()) != null) {
+                sb.append(line);
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return sb.toString();
+    }
+
 }

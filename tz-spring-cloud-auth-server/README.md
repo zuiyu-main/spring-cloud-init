@@ -399,7 +399,7 @@ public class TokenConfig {
 ```
 
 ## jdbc 保存详情
-* mysql配置客户端详情表以及授权码表，sql见resources/db/clientDetail.sql
+* mysql配置客户端详情表以及授权码表，sql见resources/db/init.sql
 
 * auth server 配置客户端详情
 ```

@@ -35,7 +35,7 @@ public class TokenConfig {
     @Bean
     public JwtAccessTokenConverter accessTokenConverter(){
         JwtAccessTokenConverter converter = new JwtAccessTokenConverter();
-        // 对称密钥，资源服务器使用该密钥验证
+        // 对称密钥，资源服务器使用该密钥验证，签名key sso使用的此key
 //        converter.setSigningKey(SIGNING_KEY);
         KeyStoreKeyFactory keyStoreKeyFactory =
                 new KeyStoreKeyFactory(new ClassPathResource("certs/zuiyu.jks"), "123456".toCharArray());

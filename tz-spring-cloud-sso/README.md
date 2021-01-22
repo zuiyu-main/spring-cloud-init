@@ -66,4 +66,6 @@ security:
       serviceId: sso1
       user-info-uri: http://localhost:8780/dashboard/user
 ```
-
+# 注意配置使用
+* auth-server token签名设置
+* 回调地址

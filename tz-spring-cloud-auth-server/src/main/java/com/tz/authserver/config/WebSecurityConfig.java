@@ -5,6 +5,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
+import org.springframework.security.config.annotation.web.builders.WebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
@@ -43,21 +44,42 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
      * @param http
      * @throws Exception
      */
+//    @Override
+//    protected void configure(HttpSecurity http) throws Exception {
+//        // 关闭csrf
+//        http.csrf().disable()
+//                // 开启验证
+//                .authorizeRequests()
+//                // 访问/r/r1需要p1
+//                .antMatchers("/r/r1").hasAnyAuthority("p1")
+//                // login* 不需要拦截
+//                .antMatchers("/login*").permitAll()
+//                // 其他的url都需要拦截
+//                .anyRequest().authenticated()
+//                .and()
+//                // 支持表单登录
+//                .formLogin();
+//    }
     @Override
-    protected void configure(HttpSecurity http) throws Exception {
-        // 关闭csrf
-        http.csrf().disable()
-                // 开启验证
-                .authorizeRequests()
-                // 访问/r/r1需要p1
-                .antMatchers("/r/r1").hasAnyAuthority("p1")
-                // login* 不需要拦截
-                .antMatchers("/login*").permitAll()
-                // 其他的url都需要拦截
-                .anyRequest().authenticated()
-                .and()
-                // 支持表单登录
-                .formLogin();
+    public void configure(WebSecurity web) throws Exception {
+        web.ignoring()
+                .antMatchers("/login.html", "/css/**", "/js/**", "/images/**")
+        ;
     }
 
+    @Override
+    protected void configure(HttpSecurity http) throws Exception {
+        http.requestMatchers()
+                .and()
+                .authorizeRequests().anyRequest().authenticated()
+                .and()
+                .formLogin()
+                .loginPage("/login.html")
+                // 只能设置login，其他失败，后续研究
+//        http://www.javaboy.org/2020/0423/oauth2-sso.html
+                .loginProcessingUrl("/login")
+                .permitAll()
+                .and()
+                .csrf().disable();
+    }
 }

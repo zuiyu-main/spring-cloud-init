@@ -43,7 +43,7 @@ public class ZuulConfig {
      * 配置全局服务ip hash
      * @return
      */
-    @Bean
+//    @Bean
     public IRule iRule(){
         /**
          * RoundRobinRule：Ribbon默认的算法，轮训

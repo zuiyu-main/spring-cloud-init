@@ -44,6 +44,9 @@ zuul:
     client-service:
       stripPrefix: false
       path: /client/**
+    client2-service:
+      stripPrefix: false
+      path: /client2/**
 management:
   endpoints:
     web:
@@ -59,3 +62,15 @@ feign:
       min-request-size: 2048
     response:
       enabled: true
+
+hystrix:
+  command:
+    default:
+      circuitBreaker:
+        sleepWindowInMilliseconds: 100000
+        forceClosed: true
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 60000
+  shareSecurityContext: true

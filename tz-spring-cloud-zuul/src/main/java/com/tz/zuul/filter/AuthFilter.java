@@ -63,10 +63,8 @@ public class AuthFilter extends ZuulFilter {
         OAuth2Request oAuth2Request = oAuth2Authentication.getOAuth2Request();
         Map<String, String> requestParameters = oAuth2Request.getRequestParameters();
         Map<String,Object> jsonToken = new HashMap<>(requestParameters);
-        if(null != userAuthentication ){
-            jsonToken.put("principal",principal);
-            jsonToken.put("authorities",authorities);
-        }
+        jsonToken.put("principal",principal);
+        jsonToken.put("authorities",authorities);
         // 把身份信息放在请求头，转发子服务
         ctx.addZuulRequestHeader("json-token", EncryptUtil.encodeUTF8StringBase64(JSON.toJSONString(jsonToken)));
         return null;

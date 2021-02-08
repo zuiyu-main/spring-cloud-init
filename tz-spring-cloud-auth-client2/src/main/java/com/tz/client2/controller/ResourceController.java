@@ -1,15 +1,15 @@
-package com.tz.client.controller;
+package com.tz.client2.controller;
 
 import com.alibaba.fastjson.JSON;
 import com.oracle.tools.packager.Log;
 import com.tz.base.model.UserDto;
+import com.tz.client2.feign.service.Client1Service;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.access.prepost.PreAuthorize;
-import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContext;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
@@ -23,6 +23,8 @@ public class ResourceController {
 
     @Value("${server.port}")
     public String port;
+    @Autowired
+    private Client1Service client1Service;
     /**
      * PreAuthorize 拥有p1权限即可访问r1
      * @return
@@ -34,7 +36,7 @@ public class ResourceController {
 //        UserDto userDto =(UserDto) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
         Object principal = SecurityContextHolder.getContext().getAuthentication().getPrincipal();
         UserDto userDto = JSON.parseObject(principal.toString(), UserDto.class);
-        return userDto.getUsername() + "访问资源r1";
+        return userDto.getUsername() + "访问client2资源r1";
     }
     @GetMapping("/r/r2")
     @PreAuthorize("hasAnyAuthority('p2')")
@@ -47,12 +49,12 @@ public class ResourceController {
         SecurityContext context = SecurityContextHolder.getContext();
         return "ccc"+port;
     }
+
     @GetMapping("/hello")
-    public String hello(@RequestParam String name){
-        Log.info("hello :"+name);
-        SecurityContext context = SecurityContextHolder.getContext();
-        Authentication authentication = context.getAuthentication();
-        Object principal = authentication.getPrincipal();
-        return principal.toString();
+    public String hello(){
+        String client2 = client1Service.hello("client2");
+        Log.info(String.format("feign client1 return val [%s]",client2));
+        return client2;
     }
+
 }

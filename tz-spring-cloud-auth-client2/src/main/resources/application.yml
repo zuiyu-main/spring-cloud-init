@@ -1,6 +1,6 @@
 spring:
   application:
-    name: client-service
+    name: client2-service
   main:
     allow-bean-definition-overriding: true
   http:
@@ -38,13 +38,13 @@ eureka:
     prefer-ip-address: true
     instance-id: ${spring.application.name}:${spring.cloud.client.ip-address}:${spring.application.instance_id:${server.port}}
 server:
-  port: 8764
+  port: 8765
   tomcat:
     remote-ip-header: x-forwarded-for
     protocol-header: x-forwarded-proto
   use-forward-headers: true
   servlet:
-    context-path: /client
+    context-path: /client2
 
 logging:
   level:
@@ -59,7 +59,7 @@ management:
         include: refresh,health,info,env
 feign:
   hystrix:
-    enabled: true
+    enabled: false
   compression:
     request:
       enabled: true
@@ -67,7 +67,6 @@ feign:
       min-request-size: 2048
     response:
       enabled: true
-
 hystrix:
   command:
     default:

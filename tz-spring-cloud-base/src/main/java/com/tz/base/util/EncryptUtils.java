@@ -1,4 +1,4 @@
-package com.tz.client.util;
+package com.tz.base.util;
 
 
 import org.slf4j.Logger;
@@ -9,8 +9,8 @@ import java.net.URLDecoder;
 import java.net.URLEncoder;
 import java.util.Base64;
 
-public class EncryptUtil {
-    private static final Logger logger = LoggerFactory.getLogger(EncryptUtil.class);
+public class EncryptUtils {
+    private static final Logger logger = LoggerFactory.getLogger(EncryptUtils.class);
 
     public static String encodeBase64(byte[] bytes){
         String encoded = Base64.getEncoder().encodeToString(bytes);
@@ -68,16 +68,16 @@ public class EncryptUtil {
 
     public static void main(String [] args){
         String str = "abcd{'a':'b'}";
-        String encoded = EncryptUtil.encodeUTF8StringBase64(str);
-        String decoded = EncryptUtil.decodeUTF8StringBase64(encoded);
+        String encoded = EncryptUtils.encodeUTF8StringBase64(str);
+        String decoded = EncryptUtils.decodeUTF8StringBase64(encoded);
         System.out.println(str);
         System.out.println(encoded);
         System.out.println(decoded);
 
         String url = "== wo";
-        String urlEncoded = EncryptUtil.encodeURL(url);
-        String urlDecoded = EncryptUtil.decodeURL(urlEncoded);
-        
+        String urlEncoded = EncryptUtils.encodeURL(url);
+        String urlDecoded = EncryptUtils.decodeURL(urlEncoded);
+
         System.out.println(url);
         System.out.println(urlEncoded);
         System.out.println(urlDecoded);

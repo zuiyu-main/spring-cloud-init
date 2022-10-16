@@ -1,0 +1,330 @@
+{
+	"info": {
+		"_postman_id": "c437241a-1cdd-4236-be2c-40944a3bca7e",
+		"name": "oauth2.0",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "浏览器访问登录获取token,注意scope",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "127.0.0.1:8762/auth/oauth/authorize?client_id=c1&response_type=code&scope=all&redirect_uri=http://www.baidu.com",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8762",
+					"path": [
+						"auth",
+						"oauth",
+						"authorize"
+					],
+					"query": [
+						{
+							"key": "client_id",
+							"value": "c1"
+						},
+						{
+							"key": "response_type",
+							"value": "code"
+						},
+						{
+							"key": "scope",
+							"value": "all"
+						},
+						{
+							"key": "redirect_uri",
+							"value": "http://www.baidu.com"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "认证",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "127.0.0.1:8762/auth/oauth/token?client_id=c1&client_secret=secret&grant_type=authorization_code&code=xG776V&redirect_uri=http://www.baidu.com",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8762",
+					"path": [
+						"auth",
+						"oauth",
+						"token"
+					],
+					"query": [
+						{
+							"key": "client_id",
+							"value": "c1"
+						},
+						{
+							"key": "client_secret",
+							"value": "secret"
+						},
+						{
+							"key": "grant_type",
+							"value": "authorization_code"
+						},
+						{
+							"key": "code",
+							"value": "xG776V"
+						},
+						{
+							"key": "redirect_uri",
+							"value": "http://www.baidu.com"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "密码模式访问，客户端详情等获取token",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8763/zuul/auth/oauth/token?client_id=c1&client_secret=secret&username=tz&password=123&grant_type=password",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8763",
+					"path": [
+						"zuul",
+						"auth",
+						"oauth",
+						"token"
+					],
+					"query": [
+						{
+							"key": "client_id",
+							"value": "c1"
+						},
+						{
+							"key": "client_secret",
+							"value": "secret"
+						},
+						{
+							"key": "grant_type",
+							"value": "client_credentials",
+							"disabled": true
+						},
+						{
+							"key": "username",
+							"value": "tz"
+						},
+						{
+							"key": "password",
+							"value": "123"
+						},
+						{
+							"key": "redirect_uri",
+							"value": "http://www.baidu.com",
+							"disabled": true
+						},
+						{
+							"key": "grant_type",
+							"value": "password"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "校验token",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "127.0.0.1:8763/zuul/auth/oauth/check_token?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOlsicmVzMSJdLCJ1c2VyX25hbWUiOiJ7XCJmdWxsbmFtZVwiOlwidGVzdFwiLFwiaWRcIjoxLFwicGFzc3dvcmRcIjpcIiQyYSQxMCQ5emc0bHhrc0xFVFVjLzA5eTdydWwucXhUaldZYlMvZGdOV0k1SlpCMXdERE1yaVEzM0UzcVwiLFwidXNlcm5hbWVcIjpcInR6XCJ9Iiwic2NvcGUiOlsiUk9MRV9BRE1JTiIsIlJPTEVfVVNFUiIsIlJPTEVfQVBJIl0sImV4cCI6MTYwMzE3MDY0MiwiYXV0aG9yaXRpZXMiOlsicDEiXSwianRpIjoiY2M0NGFiZjktNjQwOS00NTc3LThkMTEtMWFhMzNhOTkzMWQxIiwiY2xpZW50X2lkIjoiYzEifQ.8gqdgQ4ohYzduhEz03CFiRs6QXaal0DjD_WBzxXW8sI",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8763",
+					"path": [
+						"zuul",
+						"auth",
+						"oauth",
+						"check_token"
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOlsicmVzMSJdLCJ1c2VyX25hbWUiOiJ7XCJmdWxsbmFtZVwiOlwidGVzdFwiLFwiaWRcIjoxLFwicGFzc3dvcmRcIjpcIiQyYSQxMCQ5emc0bHhrc0xFVFVjLzA5eTdydWwucXhUaldZYlMvZGdOV0k1SlpCMXdERE1yaVEzM0UzcVwiLFwidXNlcm5hbWVcIjpcInR6XCJ9Iiwic2NvcGUiOlsiUk9MRV9BRE1JTiIsIlJPTEVfVVNFUiIsIlJPTEVfQVBJIl0sImV4cCI6MTYwMzE3MDY0MiwiYXV0aG9yaXRpZXMiOlsicDEiXSwianRpIjoiY2M0NGFiZjktNjQwOS00NTc3LThkMTEtMWFhMzNhOTkzMWQxIiwiY2xpZW50X2lkIjoiYzEifQ.8gqdgQ4ohYzduhEz03CFiRs6QXaal0DjD_WBzxXW8sI"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "测试资源访问",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOlsicmVzMSJdLCJ1c2VyX25hbWUiOiJ7XCJmdWxsbmFtZVwiOlwidGVzdFwiLFwiaWRcIjoxLFwicGFzc3dvcmRcIjpcIiQyYSQxMCQ5emc0bHhrc0xFVFVjLzA5eTdydWwucXhUaldZYlMvZGdOV0k1SlpCMXdERE1yaVEzM0UzcVwiLFwidXNlcm5hbWVcIjpcInR6XCJ9Iiwic2NvcGUiOlsiUk9MRV9BRE1JTiIsIlJPTEVfVVNFUiIsIlJPTEVfQVBJIl0sImV4cCI6MTU4MDczMDI4NCwiYXV0aG9yaXRpZXMiOlsicDEiXSwianRpIjoiZmQ4YWY4NTQtZDk1My00ODRiLTg5ZjEtYzYyZmZmZGViMmRlIiwiY2xpZW50X2lkIjoiYzEifQ.yuef82v088_fEZ3aZ3ejDjhC8nHMReNsDVAY2TEbrwo",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "127.0.0.1:8763/zuul/client/r/r1",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8763",
+					"path": [
+						"zuul",
+						"client",
+						"r",
+						"r1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "sso q请求token认证",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8780/sso/dashboard/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8780",
+					"path": [
+						"sso",
+						"dashboard",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "测试zuul负载均衡",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOlsicmVzMSJdLCJ1c2VyX25hbWUiOiJ7XCJmdWxsbmFtZVwiOlwidGVzdFwiLFwiaWRcIjoxLFwicGFzc3dvcmRcIjpcIiQyYSQxMCQ5emc0bHhrc0xFVFVjLzA5eTdydWwucXhUaldZYlMvZGdOV0k1SlpCMXdERE1yaVEzM0UzcVwiLFwidXNlcm5hbWVcIjpcInR6XCJ9Iiwic2NvcGUiOlsiUk9MRV9BRE1JTiIsIlJPTEVfVVNFUiIsIlJPTEVfQVBJIl0sImV4cCI6MTU3ODc5NTc1NiwiYXV0aG9yaXRpZXMiOlsicDEiXSwianRpIjoiZTJiODEwZGItMWNmMS00MmMwLWEwOTYtZTM4Y2I4OGIwODg1IiwiY2xpZW50X2lkIjoiYzEifQ.CXG69fMdpNco8O1-t1D_7Baxcmxd9nWwEBtWKadCkNc",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:8763/zuul/client/test",
+					"host": [
+						"localhost"
+					],
+					"port": "8763",
+					"path": [
+						"zuul",
+						"client",
+						"test"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "刷新token，注意Authorization里面授权信息",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "secret",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "c1",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8763/zuul/auth/oauth/token?refresh_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOlsicmVzMSJdLCJ1c2VyX25hbWUiOiJ7XCJmdWxsbmFtZVwiOlwidGVzdFwiLFwiaWRcIjoxLFwicGFzc3dvcmRcIjpcIiQyYSQxMCQ5emc0bHhrc0xFVFVjLzA5eTdydWwucXhUaldZYlMvZGdOV0k1SlpCMXdERE1yaVEzM0UzcVwiLFwidXNlcm5hbWVcIjpcInR6XCJ9Iiwic2NvcGUiOlsiUk9MRV9BRE1JTiIsIlJPTEVfVVNFUiIsIlJPTEVfQVBJIl0sImF0aSI6ImNjNDRhYmY5LTY0MDktNDU3Ny04ZDExLTFhYTMzYTk5MzFkMSIsImV4cCI6MTYwMzQyMjY0MiwiYXV0aG9yaXRpZXMiOlsicDEiXSwianRpIjoiZWI3NTYxZjUtNmE5MS00NjRiLTlkOGItZDRjYmNkNzM5YjA2IiwiY2xpZW50X2lkIjoiYzEifQ.eJVsTiv6AvQmpwgn1Le9vqJiJX49rHeHmZomZqwQ6II&grant_type=refresh_token",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8763",
+					"path": [
+						"zuul",
+						"auth",
+						"oauth",
+						"token"
+					],
+					"query": [
+						{
+							"key": "refresh_token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOlsicmVzMSJdLCJ1c2VyX25hbWUiOiJ7XCJmdWxsbmFtZVwiOlwidGVzdFwiLFwiaWRcIjoxLFwicGFzc3dvcmRcIjpcIiQyYSQxMCQ5emc0bHhrc0xFVFVjLzA5eTdydWwucXhUaldZYlMvZGdOV0k1SlpCMXdERE1yaVEzM0UzcVwiLFwidXNlcm5hbWVcIjpcInR6XCJ9Iiwic2NvcGUiOlsiUk9MRV9BRE1JTiIsIlJPTEVfVVNFUiIsIlJPTEVfQVBJIl0sImF0aSI6ImNjNDRhYmY5LTY0MDktNDU3Ny04ZDExLTFhYTMzYTk5MzFkMSIsImV4cCI6MTYwMzQyMjY0MiwiYXV0aG9yaXRpZXMiOlsicDEiXSwianRpIjoiZWI3NTYxZjUtNmE5MS00NjRiLTlkOGItZDRjYmNkNzM5YjA2IiwiY2xpZW50X2lkIjoiYzEifQ.eJVsTiv6AvQmpwgn1Le9vqJiJX49rHeHmZomZqwQ6II"
+						},
+						{
+							"key": "clientId",
+							"value": "c1",
+							"disabled": true
+						},
+						{
+							"key": "client_secret",
+							"value": "secret",
+							"disabled": true
+						},
+						{
+							"key": "grant_type",
+							"value": "refresh_token"
+						}
+					]
+				},
+				"description": "注意Authorization里面授权信息"
+			},
+			"response": []
+		}
+	]
+}
